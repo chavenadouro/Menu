@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ementa do Restaurante</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto; /* Added margin for better visibility on small screens */
+            background-color: #fff;
+            border: 5px solid #8B0000; /* Dark red border */
+            box-sizing: border-box;
+        }
+        .left {
+            width: 30%;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .left h2 {
+            font-size: 2em;
+            color: #00008B; /* Dark blue color */
+            margin: 0;
+        }
+        .left .price {
+            font-size: 3em;
+            color: #00008B;
+            margin-top: 20px;
+        }
+        .right {
+            width: 70%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .right .top-section {
+            margin-bottom: 20px;
+        }
+        .right .top-section h2 {
+            font-size: 1.5em;
+            color: #00008B; /* Dark blue color */
+            margin: 0;
+        }
+        .right .top-section h3 {
+            font-size: 2.5em;
+            color: #000;
+            margin: 10px 0;
+        }
+        .right .specialties {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .specialty {
+            width: 23%; /* Four items per row */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .specialty img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+        .specialty p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #000;
+        }
+        .specialty p.extra {
+            font-size: 0.9em;
+            color: #8B0000; /* Dark red color */
+        }
+
+        /* Responsiveness */
+        @media (max-width: 1024px) {
+            .specialty {
+                width: 31%; /* Three items per row */
+            }
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+		text-align: center;
+            }
+            .left, .right {
+                width: 100%;
+            }
+            .specialties {
+                justify-content: center;
+            }
+            .specialty {
+                width: 45%; /* Two items per row */
+            }
+        }
+        @media (max-width: 480px) {
+            .left h2 {
+                font-size: 2em;
+		align-items: center;
+		text-align: center;
+            }
+            .left .price {
+                font-size: 2.5em;
+		align-items: center;
+		text-align: center;
+            }
+            .right .top-section h2 {
+                font-size: 2em;
+		align-items: center;
+		text-align: center;
+            }
+            .right .top-section h3 {
+                font-size: 1.5em;
+		align-items: center;
+		text-align: center;
+            }
+            .specialty {
+                width: 100%; /* One item per row */
+		align-items: center;
+		text-align: center;
+            }
+	    .specialty img {
+                width: 50%; /* Smaller images */
+                margin: 0 auto; /* Center the images */
+            }
+        }
+	 .date {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <!-- <div class="left">
+            <h2>PRATO<br>+</h2>
+            <h2>SOPA<br>+</h2>
+            <h2>1 BEBIDA<br>+</h2>
+            <h2>1 PÃO</h2>
+            <div class="price">6,40€</div>
+        </div> -->
+
+	<div class="left">
+            <h2 style= "color: rgb(139, 0, 0);">CHÁVENA D'OURO</h2>
+        <div id="currentDate" class="date" style="margin-top:10px;">
+	</div>
+        </div> 
+        <div class="right">
+            <div class="top-section">
+                <p style="text-align: left; font-weight: bold; text-decoration: underline; font-size: 1.3em; color: rgb(0, 0, 139); margin-top:0px;">ESPECIALIDADE DO DIA:</p>
+                <h3 id="dailySpecial" style="margin-bottom: 40px;">Lombo Assado no Forno</h3>
+                <p style="text-align: left; font-weight: bold; text-decoration: underline; color: rgb(0, 0, 139); font-size: 0.8em;">Outras especialidades incluídas no menu:</p>
+            </div>
+            <div class="specialties">
+                <div class="specialty">
+                   <img src="bife-a-casa.jpg" alt="Bife à Casa">
+                    <p>Bife à Casa</p>
+                </div>
+                <div class="specialty">
+
+                    <img src="filetes-pescada.jpg" alt="Filetes de Pescada">
+                    <p>Filetes de Pescada</p>
+                </div>
+                <div class="specialty">
+                    <img src="alheira.jpg" alt="Alheira">
+                    <p>Alheira</p>
+                </div>
+                <div class="specialty">
+                    <img src="fevera-grelhada.jpg" alt="Feveras Grelhadas">
+                    <p>Feveras Grelhadas</p>
+                </div>
+                <div class="specialty">
+                    <img src="costoleta-grelhada.jpg" alt="Costeletas Grelhadas">
+                    <p>Costeletas Grelhadas</p>
+                </div>
+                <div class="specialty">
+                    <img src="peru-grelhado.jpg" alt="Bife de Peru">
+                    <p>Bife de Peru</p>
+                </div>
+                <div class="specialty">
+                    <img src="bacalhau-a-braga.jpg" alt="Bacalhau à Braga">
+                    <p>Bacalhau à Braga <span class="extra"><br>(+2,50€)</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('daily-special.json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('dailySpecial').textContent = data.dailySpecial;
+                })
+                .catch(error => console.error('Erro ao carregar a especialidade do dia:', error));
+        });
+    </script>
+	    <script>
+     function getCurrentDate() {
+            const today = new Date();
+            const day = String(today.getDate()).padStart(2, '0');
+            const month = String(today.getMonth() + 1).padStart(2, '0'); // Janeiro é 0!
+            const year = today.getFullYear();
+            return `${day}/${month}/${year}`;
+        }
+
+        document.getElementById('currentDate').textContent = getCurrentDate();
+    </script>
+</body>
+</html>
